@@ -499,9 +499,116 @@ SELECT AVG(COMM),DEPTNO
     
     
 -- ROLLUP Function
-
+-- 각 GROUP의 전체 결과를 묶어서 한 열로 출력해줌
+SELECT DEPTNO,JOB,COUNT(SAL), MAX(SAL),MIN(SAL),AVG(SAL)
+    FROM EMP
+    GROUP BY DEPTNO,ROLLUP(JOB);
 -- CUBE Function
 
 -- SETS Function
 
+ -- GROUPINg Function
  
+ -- CHAPTER 8
+ -- 1. Multiple FROM (= Cross Join)
+ -- M * N 의 결과값이 생성됨
+ SELECT *
+    FROM EMP,DEPT
+    ORDER BY EMPNO;
+ 
+-- 2. Multiple FROM with WHERE
+-- Cross Join의 결과물 중에서 DEPTNO가 일치하는것만 출력하도록 제한
+-- 이때 테이블의 Alias에는 AS를 쓰지 않음
+SELECT *
+    FROM EMP,DEPT
+    WHERE EMP.DEPTNO = DEPT.DEPTNO;
+
+SELECT E.EMPNO,D.DEPTNO
+    FROM EMP E, DEPT D
+    WHERE E.DEPTNO = D.DEPTNO
+    ORDER BY EMPNO;
+    
+-- 등가 조인
+-- 두 열이 등식으로 일치하는 경우
+-- 이너 조인(Inner Join)과 유사
+SELECT E.EMPNO,E.ENAME,D.DEPTNO,D.DNAME,D.LOC
+    FROM EMP E, DEPT D
+    WHERE E.DEPTNO = D.DEPTNO
+        AND SAL >=3000
+    ORDER BY EMPNO;
+
+-- 비등가 조인
+-- 열이 등식으로 일치하는 것이 아니라, 부등식으로 범위 내에 드는 경우도 Join 가능
+SELECT *
+    FROM EMP E,SALGRADE S
+    WHERE E.SAL BETWEEN S.LOSAL AND S.HISAL;
+    
+-- 자체 조인(Self Join)
+SELECT *
+    FROM EMP E1, EMP E2
+    WHERE E1.EMPNO = E2.MGR;
+    
+-- 외부 조인(Outer Join)
+-- Left Outer Join/Right Outer Join/Full Outer Join
+-- 근데 보통 Outer를 제외하고 Left/Right/Full로 부름
+SELECT *
+    FROM EMP E1,EMP E2
+    WHERE E1.MGR = E2.EMPNO(+);
+    
+SELECT *
+    FROM EMP E1,EMP E2
+    WHERE E1.MGR(+) = E2.EMPNO;
+
+-- 3. NATURAL JOIN
+-- 자동으로 이름과 자료형이 같은 열 찾아 등가 조인
+-- 열이 여러개라면? -> 안 찾아봄
+SELECT *
+    FROM EMP E NATURAL JOIN DEPT D;
+
+-- 4. JOIN USING
+-- 역시 등가 조인 수행, 단, 문법상 열에 괄호를 써야 함
+SELECT *
+    FROM EMP E
+    JOIN DEPT D USING (DEPTNO);
+
+-- 5. JOIN ON
+-- 역시 등가 조인
+-- 가장 많이 쓰는 방식
+SELECT *
+    FROM EMP E
+    JOIN DEPT D ON E.DEPTNO = D.DEPTNO;
+    
+-- 7. OUTER JOIN
+SELECT *
+    FROM EMP E
+    LEFT JOIN DEPT D ON (E.DEPTNO = D.DEPTNO);
+    
+-- Q1
+SELECT D.DEPTNO,DNAME,EMPNO,ENAME,SAL
+    FROM DEPT D, EMP E
+    WHERE D.DEPTNO = E.DEPTNO
+        AND SAL >2000;
+        
+SELECT DEPTNO,DNAME,EMPNO,ENAME,SAL
+    FROM DEPT D
+        JOIN EMP E USING (DEPTNO)
+    WHERE SAL >2000;
+
+-- Q2
+SELECT D.DEPTNO,D.DNAME,
+    AVG(SAL) AS AVG_SAL,
+    MAX(SAL) AS MAX_SAL,
+    MIN(SAL) AS MIN_SAL,
+    COUNT(SAL) AS CNT
+    FROM DEPT D, EMP E
+    WHERE D.DEPTNO = E.DEPTNO
+    GROUP BY (D.DEPTNO,DNAME);
+-- Q3
+
+-- Q4
+SELECT *
+    FROM SALGRADE S,EMP E1
+    LEFT JOIN EMP E2 ON E1.MGR = E2.EMPNO 
+    JOIN DEPT D ON E1.DEPTNO = D.DEPTNO
+    WHERE E1.SAL BETWEEN S.LOSAL AND S.HISAL;
+     
