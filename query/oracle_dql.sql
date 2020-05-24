@@ -23,7 +23,7 @@ DESC USER_CONSTRAINTS;
 -- ALTER TABLE 테이블명 ADD CONSTRAINTS 제약명 제약조건(컬럼);
 
 ALTER TABLE DEPT
-    ADD CONSTRAINTS primary key(DEPTNO);
+    ADD CONSTRAINTS PRIMARY KEY (DEPTNO);
 
 ALTER TABLE DEPT
     ADD PRIMARY KEY (DEPTNO);
@@ -611,4 +611,121 @@ SELECT *
     LEFT JOIN EMP E2 ON E1.MGR = E2.EMPNO 
     JOIN DEPT D ON E1.DEPTNO = D.DEPTNO
     WHERE E1.SAL BETWEEN S.LOSAL AND S.HISAL;
-     
+
+-- Chapter 9
+-- WHERE 절 서브쿼리
+--- WHERE절에 복잡한 조건을 걸기 위해 사용
+--- 단일행 서브쿼리 (Single Row Subquery)
+SELECT *
+    FROM EMP
+    WHERE SAL > ( SELECT SAL
+                    FROM EMP
+                    WHERE ENAME='JONES');
+                    
+SELECT *
+    FROM EMP
+    WHERE COMM > ( SELECT COMM
+                        FROM EMP
+                        WHERE ENAME='ALLEN');
+                        
+
+SELECT *
+    FROM EMP
+    WHERE HIREDATE < (SELECT HIREDATE
+                        FROM EMP
+                        WHERE ENAME='SCOTT');
+                        
+SELECT *
+    FROM EMP E, DEPT D
+    WHERE E.DEPTNO = D.DEPTNO
+        AND E.SAL > (SELECT AVG(SAL)
+                        FROM EMP);
+
+--- 다중행 서브쿼리 (Multi Row Subquery)
+-- IN
+SELECT DEPTNO,MAX(SAL)
+                    FROM EMP
+                    GROUP BY DEPTNO;
+
+SELECT *
+    FROM EMP
+    WHERE SAL IN (SELECT MAX(SAL)
+                    FROM EMP
+                    GROUP BY DEPTNO);
+
+-- ANY,SOME
+
+-- ALL
+SELECT *
+    FROM EMP
+    WHERE SAL > ALL (SELECT SAL
+                        FROM EMP
+                        WHERE DEPTNO = 30);
+
+
+SELECT *
+    FROM EMP
+    WHERE HIREDATE < ALL (SELECT HIREDATE
+                            FROM EMP
+                            WHERE DEPTNO=10);
+-- EXISTS
+-- 서브쿼리 결과가 존재하면 메인쿼리 테이블의 모든 ROW를 선택
+-- 서브쿼리 결과가 존재하지 않으면 메인쿼리 테이블의 모든 ROW를 제외
+-- 사실상 WHERE절이 없는 것이나 다름없으므로 주의
+
+--- 다중열 서브쿼리(Multi Column Subquery)
+SELECT *
+    FROM EMP
+    WHERE (DEPTNO,SAL) IN (SELECT DEPTNO,MAX(SAL)
+                    FROM EMP
+                    GROUP BY DEPTNO);
+                    
+-- FROM 절 서브쿼리
+--- 인라인 뷰(inline view)라고도 불림
+--- 테이블이 너무 커서 FROM 절에 그냥 넣어 FULL SCAN 하기 어려운 경우
+--- 테이블 내 조건에 맞는 일부 행, 일부 열만 추출한 후 별칭을 주어 사용
+
+--- 인라인 뷰가 성능향상에 도움이 되는 케이스
+--- (사실 그냥 단일테이블에 대해서 사용할 때는 큰 성능 차이가 없다)
+--- 1. ROWNUM의 단점인 ORDER BY 적용불가 해결
+--- 2. JOIN을 대규모로 수행할 경우 성능향상 
+-- 인라인 뷰
+SELECT E10.EMPNO, E10.ENAME, E10.DEPTNO, D.DNAME, D.LOC
+    FROM (SELECT * FROM EMP WHERE DEPTNO = 10) E10,
+        (SELECT * FROM DEPT) D
+    WHERE E10.DEPTNO = D.DEPTNO;
+    
+-- 인라인뷰 (WITH절 사용)
+/* WITH 별칭 AS ()
+    SELECT 열
+    FROM 별칭
+    ...
+*/
+WITH 
+    E10 AS (SELECT * FROM EMP WHERE DEPTNO = 10),
+    D AS (SELECT * FROM DEPT)
+SELECT E10.EMPNO, E10.ENAME, E10.DEPTNO, D.DNAME, D.LOC
+    FROM E10,D
+    WHERE E10.DEPTNO = D.DEPTNO;
+    
+-- SELECT절 서브쿼리
+--- 스칼라 서브쿼리(Scalar Subquery)라고도 불림
+--- 특징 : Union이 행 합치기라면, 스칼라 서브쿼리는 열 합치기
+--- 핵심 장점 : 집계함수의 결과와 집계함수를 쓰지 않은 결과를 한번에 볼 수 있음. 즉 GROUP BY와 유사한 효과 가능
+--- 단점 : 가독성이 매우 매우 심각하게 떨어질 수 있음. JOIN으로 할수 있으면 JOIN 쓰는게 맞음
+SELECT ENAME,SAL,AVG(SAL)
+    FROM EMP; -- 에러 발생!
+    
+SELECT ENAME,SAL, (SELECT AVG(SAL) FROM EMP) AS AVG_SAL
+    FROM EMP; -- 정상 실행
+    
+SELECT ENAME,SAL,DEPTNO, (SELECT AVG(SAL) FROM EMP WHERE EMP.DEPTNO = E.DEPTNO) AS AVG_SAL
+    FROM EMP E;
+    
+SELECT ENAME,
+    SAL,
+    DEPTNO, (SELECT AVG(SAL) FROM EMP WHERE EMP.DEPTNO = E.DEPTNO) AS DEPT_AVG_SAL,
+    JOB, (SELECT AVG(SAL) FROM EMP WHERE EMP.JOB = E.JOB) AS JOB_AVG_SAL
+    FROM EMP E;   
+    
+    
