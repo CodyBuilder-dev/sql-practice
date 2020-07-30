@@ -1,5 +1,6 @@
 # sql-practice
-5월 SQLD 시험대비를 위한 SQL문 실습 repo
+<s>5월 SQLD 시험대비를 위한 SQL문 실습 repo</s> => 시험 합격  
+SQLP 대비 및 업무를 위한 SQL문 학습 repo
 
 ## repo의 구성
 1. data : 실습용으로 사용할 데이터베이스 및 메타데이터 DDL/DML
