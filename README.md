@@ -18,4 +18,4 @@ SQLP 대비 및 업무를 위한 SQL문 학습 repo
 |V$SQL 관련뷰 컬럼|[링크](https://hyunki1019.tistory.com/42)|
 |쿼리 실행이력 조회|[링크](http://blog.naver.com/PostView.nhn?blogId=webmaster23&logNo=220909957416&parentCategoryNo=&categoryNo=3&viewDate=&isShowPopularPosts=false&from=postView)|
 |쿼리 실행시간 기록 조회|[링크](https://hellowk1.blogspot.com/2018/06/oracle-db.html) <br>[링크](https://tyboss.tistory.com/entry/Oracle-%EC%98%A4%EB%9D%BC%ED%81%B4-%EC%BF%BC%EB%A6%AC-%EC%8B%9C%EA%B0%84)|
-|테이블 생성시간 확인하기|[링크](etc-query/check_create_date.sql|
+|테이블 생성시간 확인하기|[링크](etc-query/check_create_date.sql)|
