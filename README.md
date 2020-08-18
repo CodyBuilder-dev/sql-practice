@@ -8,7 +8,12 @@ SQLP 대비 및 업무를 위한 SQL문 학습 repo
 3. setting : 데이터베이스 내 유저 등 설정파일
 
 ## 레퍼런스 정리
+### 개발툴
+|내용|링크|
+|---|---|
+|SQL Developer 날짜 표기 설정|https://allmana.tistory.com/98|
 ### DBMS
+
 ### 메타데이터
 |DBMS|내용|링크|
 |---|---|---|
