@@ -51,4 +51,4 @@ doit-oracle : Doit! 오라클 교재 폴더
 |DBMS|내용|링크|
 |---|---|---|
 |Oracle|오라클 서브프로그램|[함수와 프로시저](https://gdtbgl93.tistory.com/149)|
-|Oracle|프로시저 중첩||
+|Oracle|중첩 블록|[링크](https://nrhan.tistory.com/entry/PLSQL-%EA%B0%9C%EA%B4%80-2)|
