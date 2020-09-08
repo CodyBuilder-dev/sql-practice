@@ -12,9 +12,9 @@ doit-oracle : Doit! 오라클 교재 폴더
 ### 개발툴
 |내용|링크|
 |---|---|
-|SQL Developer 날짜 표기 설정|https://allmana.tistory.com/98|
-|ORACLE_HOME,TNS_ADMIN 경로 설정|https://www.hyoyoung.net/88|
-|TOAD 클라이언트 인식 문제 해결|http://blog.naver.com/PostView.nhn?blogId=icandoevery&logNo=140115580947&redirect=Dlog&widgetTypeCall=true|
+|SQL Developer 날짜 표기 설정|[링크](https://allmana.tistory.com/98)|
+|ORACLE_HOME,TNS_ADMIN 경로 설정|[링크](https://www.hyoyoung.net/88)|
+|TOAD 클라이언트 인식 문제 해결|[링크](http://blog.naver.com/PostView.nhn?blogId=icandoevery&logNo=140115580947&redirect=Dlog&widgetTypeCall=true)|
 |SQL Developer 한글깨짐|[시스템 언어를 영어로 설정](https://dongyeopblog.wordpress.com/2016/03/16/%EC%98%A4%EB%9D%BC%ED%81%B4-sql-developer-%ED%95%9C%EA%B8%80%EA%B9%A8%EC%A7%90%EB%AC%B8%EC%A0%9C-%EC%98%81%EB%AC%B8%ED%8C%90/)|
 
 ### 에러 대응
