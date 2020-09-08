@@ -33,6 +33,22 @@ doit-oracle : Doit! 오라클 교재 폴더
 |ORACLE| 테이블 생성시간 확인하기|[링크](etc-query/check_create_date.sql)|
 |ORACLE| 권한 부여/제거/조회(USER_TAB_PRIVS_RECD) | [링크](https://m.blog.naver.com/PostView.nhn?blogId=heartflow89&logNo=221002112762&proxyReferer=https:%2F%2Fwww.google.com%2F)|
 ### DML
-|오라클|내용|링크|
+|DBMS|내용|링크|
 |---|---|---|
 |ORACLE|UPDATE문 여러 컬럼 한번에 수행|[링크](https://dongdongfather.tistory.com/114)|
+
+### 함수
+|DBMS|내용|링크|
+|--|--|--|
+|Oracle|문자열 처리 함수|[링크](https://m.blog.naver.com/PostView.nhn?blogId=c6369&logNo=220734317313&proxyReferer=https:%2F%2Fwww.google.com%2F)|
+
+### PL/SQL
+|DBMS|내용|링크|
+|--|--|--|
+|Oracle|반복문|[링크](https://coding-factory.tistory.com/452)|
+
+### 프로시저
+|DBMS|내용|링크|
+|---|---|---|
+|Oracle|오라클 서브프로그램|[함수와 프로시저](https://gdtbgl93.tistory.com/149)|
+|Oracle|프로시저 중첩||
