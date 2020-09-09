@@ -43,6 +43,11 @@ doit-oracle : Doit! 오라클 교재 폴더
 |---|---|---|
 |ORACLE|UPDATE문 여러 컬럼 한번에 수행|[링크](https://dongdongfather.tistory.com/114)|
 
+### Join
+|DBMS|내용|링크|
+|--|--|--|
+|Oracle|(+) 조인|[링크](https://gent.tistory.com/289)|
+
 ### 함수
 |DBMS|내용|링크|
 |--|--|--|
