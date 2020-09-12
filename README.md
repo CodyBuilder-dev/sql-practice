@@ -9,6 +9,10 @@ doit-oracle : Doit! 오라클 교재 폴더
 3. setting : 데이터베이스 내 유저 등 설정파일
 
 ## 레퍼런스 정리
+### 데이터베이스 일반론
+|내용|링크|
+|---|---|
+|(구)정보처리기사 데이터베이스 과목 총정리|[링크](https://androidtest.tistory.com/56)|
 ### 개발툴
 |내용|링크|
 |---|---|
@@ -17,6 +21,7 @@ doit-oracle : Doit! 오라클 교재 폴더
 |TOAD 클라이언트 인식 문제 해결|[링크](http://blog.naver.com/PostView.nhn?blogId=icandoevery&logNo=140115580947&redirect=Dlog&widgetTypeCall=true)|
 |SQL Developer 한글깨짐|[시스템 언어를 영어로 설정](https://dongyeopblog.wordpress.com/2016/03/16/%EC%98%A4%EB%9D%BC%ED%81%B4-sql-developer-%ED%95%9C%EA%B8%80%EA%B9%A8%EC%A7%90%EB%AC%B8%EC%A0%9C-%EC%98%81%EB%AC%B8%ED%8C%90/)|
 |오라클 클라이언트 다중 설치시 트러블 슈팅|[tnsnames.ora 충돌](https://booraik.tistory.com/entry/Oracle-%EC%97%AC%EB%9F%AC-Ver%EC%9D%98-%EC%98%A4%EB%9D%BC%ED%81%B4%EC%9D%84-%EC%84%A4%EC%B9%98%ED%95%A8%EC%9C%BC%EB%A1%9C-%EC%9D%B8%ED%95%B4-%EB%82%98%EB%8A%94-%EC%B6%A9%EB%8F%8C%ED%98%84%EC%83%81)|
+
 ### 에러 대응
 |내용|링크|
 |---|---|
