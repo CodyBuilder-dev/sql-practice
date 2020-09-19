@@ -19,7 +19,7 @@ doit-oracle : Doit! 오라클 교재 폴더
 |---|---|---|
 |Orcl Client|오라클 클라이언트 다중 설치시 트러블 슈팅|[tnsnames.ora 충돌](https://booraik.tistory.com/entry/Oracle-%EC%97%AC%EB%9F%AC-Ver%EC%9D%98-%EC%98%A4%EB%9D%BC%ED%81%B4%EC%9D%84-%EC%84%A4%EC%B9%98%ED%95%A8%EC%9C%BC%EB%A1%9C-%EC%9D%B8%ED%95%B4-%EB%82%98%EB%8A%94-%EC%B6%A9%EB%8F%8C%ED%98%84%EC%83%81)|
 |Orcl Client|오라클 Listener 동작 원리|[링크](http://www.gurubee.net/lecture/2811)|
-|Orcl Client|NLS_LANG의 의미|[링크](https://m.blog.naver.com/PostView.nhn?blogId=tyboss&logNo=70036575256&proxyReferer=https:%2F%2Fwww.google.com%2F)<br>[시스템 환경변수로 설정](https://daemonjin.tistory.com/entry/%EC%98%A4%EB%9D%BC%ED%81%B4-%ED%86%A0%EB%93%9C-%ED%95%9C%EA%B8%80-%EA%B9%A8%EC%A7%90-%ED%98%84%EC%83%81-%EC%B6%9C%EC%B2%98-%EC%98%A4%EB%9D%BC%ED%81%B4-%ED%86%A0%EB%93%9C-%ED%95%9C%EA%B8%80-%EA%B9%A8%EC%A7%90-%ED%98%84%EC%83%81%EC%9E%91%EC%84%B1%EC%9E%90-%EC%96%B4%EC%B2%98%EA%B5%AC%EB%8B%88)<br>[오라클 Charset 종류 및 설명](https://db.necoaki.net/134)|
+|Orcl Client|NLS_LANG의 의미|[링크](https://m.blog.naver.com/PostView.nhn?blogId=tyboss&logNo=70036575256&proxyReferer=https:%2F%2Fwww.google.com%2F)<br>[오라클 Charset 종류 및 설명](https://db.necoaki.net/134)|
 |Orcl Client|캐릭터셋 충돌 해결|[서버측 Charset 확인쿼리](https://poison81.tistory.com/entry/%EC%98%A4%EB%9D%BC%ED%81%B4-%ED%95%9C%EA%B8%80%EA%B9%A8%EC%A7%90%ED%98%84%EC%83%81-%ED%95%B4%EA%B2%B0%EB%B0%A9%EB%B2%95-%ED%86%A0%EB%93%9C)|
 |Orcl Client|설치시 옵션(instant client/런타임 등) 설명|[링크](https://m.blog.naver.com/PostView.nhn?blogId=iceprce&logNo=150131040553&proxyReferer=https:%2F%2Fwww.google.com%2F)|
 |SQL Dev|현재 데이터베이스 세션 확인법|도구 → 세션 모니터 → STATUS 컬럼 → ACTIVE/INACTIVE 필|
