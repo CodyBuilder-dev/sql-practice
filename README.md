@@ -29,7 +29,7 @@ doit-oracle : Doit! 오라클 교재 폴더
 |Toad|Toad 클라이언트 인식 문제 해결|[링크](http://blog.naver.com/PostView.nhn?blogId=icandoevery&logNo=140115580947&redirect=Dlog&widgetTypeCall=true)|
 |Toad|Describe에 Comment 보이게 하기|[링크](https://zzznara2.tistory.com/180)|
 |Toad|안쓰는 Connection 지우기|[링크](https://stove99.tistory.com/183)|
-|Toad|단축키||
+|Toad|단축키|[링크](https://unions5.tistory.com/39)|
 ### 에러 대응
 |내용|링크|
 |---|---|
