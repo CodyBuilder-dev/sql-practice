@@ -29,6 +29,7 @@ doit-oracle : Doit! 오라클 교재 폴더
 |Toad|Toad 클라이언트 인식 문제 해결|[링크](http://blog.naver.com/PostView.nhn?blogId=icandoevery&logNo=140115580947&redirect=Dlog&widgetTypeCall=true)|
 |Toad|Describe에 Comment 보이게 하기|[링크](https://zzznara2.tistory.com/180)|
 |Toad|안쓰는 Connection 지우기|[링크](https://stove99.tistory.com/183)|
+|Toad|단축키||
 ### 에러 대응
 |내용|링크|
 |---|---|
@@ -36,6 +37,7 @@ doit-oracle : Doit! 오라클 교재 폴더
 |ORA-12557에러|[링크](https://m.blog.naver.com/PostView.nhn?blogId=jjjhygo91&logNo=221527599370&proxyReferer=https:%2F%2Fwww.google.com%2F)|
 |서버 Charset/클라이언트 Charset 충돌문제||
 |ORA-12154|[OS와 Toad 비트수차이로 인한 문제](https://addio3305.tistory.com/73)|
+
 ### 메타데이터
 |DBMS|내용|링크|
 |---|---|---|
