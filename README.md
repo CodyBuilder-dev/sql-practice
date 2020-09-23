@@ -51,6 +51,7 @@ doit-oracle : Doit! 오라클 교재 폴더
 |ORACLE| 쿼리 실행시간 기록 조회|[링크](https://hellowk1.blogspot.com/2018/06/oracle-db.html) <br>[링크](https://tyboss.tistory.com/entry/Oracle-%EC%98%A4%EB%9D%BC%ED%81%B4-%EC%BF%BC%EB%A6%AC-%EC%8B%9C%EA%B0%84)|
 |ORACLE| 테이블 생성시간 확인하기|[링크](etc-query/check_create_date.sql)|
 |ORACLE| 권한 부여/제거/조회(USER_TAB_PRIVS_RECD) | [링크](https://m.blog.naver.com/PostView.nhn?blogId=heartflow89&logNo=221002112762&proxyReferer=https:%2F%2Fwww.google.com%2F)|
+|ORACLE|V$PARAMTER 확인|[구루비 링크](http://www.gurubee.net/lecture/1860)|
 
 ### DML
 |DBMS|내용|링크|
