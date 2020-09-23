@@ -35,7 +35,6 @@ doit-oracle : Doit! 오라클 교재 폴더
 |---|---|
 |DB Safer측 접근차단으로 인한 ORA-00990|https://pantarei.tistory.com/1351|
 |ORA-12557에러|[링크](https://m.blog.naver.com/PostView.nhn?blogId=jjjhygo91&logNo=221527599370&proxyReferer=https:%2F%2Fwww.google.com%2F)|
-|서버 Charset/클라이언트 Charset 충돌문제||
 |ORA-12154|[OS와 Toad 비트수차이로 인한 문제](https://addio3305.tistory.com/73)|
 
 ### 메타데이터
