@@ -34,9 +34,9 @@ doit-oracle : Doit! 오라클 교재 폴더
 ### 에러 대응
 |내용|링크|
 |---|---|
-|오라클 공백문자로 인한 UTF-8/EUC-KR간 인코딩 충돌 문제|[char(49824)](https://babolsk.tistory.com/1037)|
-|DB Safer측 접근차단으로 인한 ORA-00990|https://pantarei.tistory.com/1351|
-|ORA-12557에러|[링크](https://m.blog.naver.com/PostView.nhn?blogId=jjjhygo91&logNo=221527599370&proxyReferer=https:%2F%2Fwww.google.com%2F)|
+|오라클 공백문자 char(49824)로 인한 UTF-8/EUC-KR간 인코딩 충돌 문제|[링크](https://babolsk.tistory.com/1037)|
+|DB Safer측 접근차단으로 인한 ORA-00990|[링크](https://pantarei.tistory.com/1351)|
+|ORA-12557|[TNS 환경변수 설정](https://m.blog.naver.com/PostView.nhn?blogId=jjjhygo91&logNo=221527599370&proxyReferer=https:%2F%2Fwww.google.com%2F)|
 |ORA-12154|[OS와 Toad 비트수차이로 인한 문제](https://addio3305.tistory.com/73)|
 
 ### 메타데이터
