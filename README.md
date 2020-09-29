@@ -27,17 +27,17 @@ doit-oracle : Doit! 오라클 교재 폴더
 |SQL Dev|ORACLE_HOME,TNS_ADMIN 경로 설정|[링크](https://www.hyoyoung.net/88)|
 |SQL Dev|SQL Developer 한글깨짐|[시스템 언어를 영어로 설정](https://dongyeopblog.wordpress.com/2016/03/16/%EC%98%A4%EB%9D%BC%ED%81%B4-sql-developer-%ED%95%9C%EA%B8%80%EA%B9%A8%EC%A7%90%EB%AC%B8%EC%A0%9C-%EC%98%81%EB%AC%B8%ED%8C%90/)|
 |Toad|Toad 클라이언트 인식 문제 해결|[링크](http://blog.naver.com/PostView.nhn?blogId=icandoevery&logNo=140115580947&redirect=Dlog&widgetTypeCall=true)|
-|Toad|Describe에 Comment 보이게 하기|[링크](https://zzznara2.tistory.com/180)|
+|Toad|Describe에 Column/Table Comment 보이게 하기|[링크](https://zzznara2.tistory.com/180)|
 |Toad|안쓰는 Connection 지우기|[링크](https://stove99.tistory.com/183)|
 |Toad|단축키|[링크](https://unions5.tistory.com/39)|
-
+|Toad|실행계획 보기|[링크](https://goddaehee.tistory.com/160)|
 ### 에러 대응
-|내용|링크|
-|---|---|
-|오라클 공백문자 char(49824)로 인한 UTF-8/EUC-KR간 인코딩 충돌 문제|[char(49824) 확인](https://babolsk.tistory.com/1037)<br>[한글인코딩간 호환성 관계](https://studyforus.tistory.com/167)<br>[비즈메시지 인코딩](https://m.blog.naver.com/PostView.nhn?blogId=mirinae_choi&logNo=220872610843&proxyReferer=https:%2F%2Fwww.google.com%2F)|
-|DB Safer측 접근차단으로 인한 ORA-00990|[링크](https://pantarei.tistory.com/1351)|
-|ORA-12557|[TNS 환경변수 설정](https://m.blog.naver.com/PostView.nhn?blogId=jjjhygo91&logNo=221527599370&proxyReferer=https:%2F%2Fwww.google.com%2F)|
-|ORA-12154|[OS와 Toad 비트수차이로 인한 문제](https://addio3305.tistory.com/73)|
+|DBMS|내용|링크|
+|---|---|---|
+|ORACLE|오라클 공백문자 char(49824)로 인한 UTF-8/EUC-KR간 인코딩 충돌 문제|[char(49824) 확인](https://babolsk.tistory.com/1037)<br>[한글인코딩간 호환성 관계](https://studyforus.tistory.com/167)<br>[비즈메시지 인코딩](https://m.blog.naver.com/PostView.nhn?blogId=mirinae_choi&logNo=220872610843&proxyReferer=https:%2F%2Fwww.google.com%2F)|
+|ORACLE|DB Safer측 접근차단으로 인한 ORA-00990|[링크](https://pantarei.tistory.com/1351)|
+|ORACLE|ORA-12557|[TNS 환경변수 설정](https://m.blog.naver.com/PostView.nhn?blogId=jjjhygo91&logNo=221527599370&proxyReferer=https:%2F%2Fwww.google.com%2F)|
+|ORACLE|ORA-12154|[OS와 Toad 비트수차이로 인한 문제](https://addio3305.tistory.com/73)|
 
 ### 메타데이터
 |DBMS|내용|링크|
@@ -59,6 +59,10 @@ doit-oracle : Doit! 오라클 교재 폴더
 |---|---|---|
 |ORACLE|UPDATE문 여러 컬럼 한번에 수행|[링크](https://dongdongfather.tistory.com/114)|
 
+### 기타 키워드
+|DBMS|내용|링크|
+|--|--|--|
+|ORACLE|UNION과 UNION ALL의 차이|[링크](https://dpdpwl.tistory.com/98)|
 ### Join
 |DBMS|내용|링크|
 |--|--|--|
