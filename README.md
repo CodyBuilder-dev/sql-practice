@@ -71,7 +71,8 @@ doit-oracle : Doit! 오라클 교재 폴더
 ### 함수
 |DBMS|내용|링크|
 |--|--|--|
-|Oracle|문자열 처리 함수|[링크](https://m.blog.naver.com/PostView.nhn?blogId=c6369&logNo=220734317313&proxyReferer=https:%2F%2Fwww.google.com%2F)|
+|ORACLE|함수의 조회부터 실행까지|[링크](https://wakestand.tistory.com/127)|
+|ORACLE|문자열 처리 함수|[링크](https://m.blog.naver.com/PostView.nhn?blogId=c6369&logNo=220734317313&proxyReferer=https:%2F%2Fwww.google.com%2F)|
 
 ### PL/SQL & 프로시저
 |DBMS|내용|링크|
