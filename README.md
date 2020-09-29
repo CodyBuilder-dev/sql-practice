@@ -31,6 +31,7 @@ doit-oracle : Doit! 오라클 교재 폴더
 |Toad|안쓰는 Connection 지우기|[링크](https://stove99.tistory.com/183)|
 |Toad|단축키|[링크](https://unions5.tistory.com/39)|
 |Toad|실행계획 보기|[링크](https://goddaehee.tistory.com/160)|
+
 ### 에러 대응
 |DBMS|내용|링크|
 |---|---|---|
@@ -59,10 +60,11 @@ doit-oracle : Doit! 오라클 교재 폴더
 |---|---|---|
 |ORACLE|UPDATE문 여러 컬럼 한번에 수행|[링크](https://dongdongfather.tistory.com/114)|
 
-### 기타 키워드
+### 기타 문법 키워드
 |DBMS|내용|링크|
 |--|--|--|
 |ORACLE|UNION과 UNION ALL의 차이|[링크](https://dpdpwl.tistory.com/98)|
+|ORACLE|'(작은따옴표)와 "(큰따옴표) 관련 문제|[차이점](https://okky.kr/article/312394)<br>|
 ### Join
 |DBMS|내용|링크|
 |--|--|--|
