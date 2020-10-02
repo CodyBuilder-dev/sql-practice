@@ -1,6 +1,7 @@
 # sql-practice
 <s>5월 SQLD 시험대비를 위한 SQL문 실습 repo</s> => 시험 합격  
-SQLP 대비 및 업무를 위한 SQL문 학습 repo
++ SQLP 대비 및 업무를 위한 SQL문 학습 repo  
++ DAP 대비 및 업무를 위한 데이터 모델링 공부 추가
 
 ## repo의 구성
 doit-oracle : Doit! 오라클 교재 폴더
@@ -13,6 +14,11 @@ doit-oracle : Doit! 오라클 교재 폴더
 |내용|링크|
 |---|---|
 |(구)정보처리기사 데이터베이스 과목 총정리|[링크](https://androidtest.tistory.com/56)|
+
+### 데이터 모델링
+|내용|링크|
+|---|---|
+|||
 
 ### 개발툴
 |분류|내용|링크|
