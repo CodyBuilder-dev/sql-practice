@@ -1,0 +1,12 @@
+
+
+-- 현재 LOCK 확인
+SELECT * FROM V$LOCK;
+
+EXEC print_table('SELECT * FROM V$LOCK');
+
+-- TX LOCK 목록 확인
+SELECT * FROM V$LOCK WHERE TYPE = 'TX';
+
+-- TM LOCK 목록 확인
+SELECT * FROM DBA_DML_LOCKS;

@@ -1,0 +1,139 @@
+/**
+ * 오라클 힌트 실습을 위한 쿼리 모음집
+ * 힌트가 잘 짜였는지 보기 위해선
+ * 1. 해당 쿼리의 실행 계획 확인
+ * 2. 해당 쿼리의 실행 시간 측정
+ * 3. 통계정보 확인
+ */
+
+SELECT 
+	EMPNO, ENAME, SAL
+FROM SCOTT.EMP;
+
+
+------- 인덱스 스캔 방향 -------------
+-- 순방향 스캔
+SELECT /*+ index_asc */
+	EMPNO, ENAME, SAL
+FROM SCOTT.EMP;
+
+----------------- 옵티마이저 정책 ----------------------
+-- ALL_ROWS 
+SELECT /*+ ALL_ROWS */
+	EMPNO, ENAME, SAL
+FROM SCOTT.EMP;
+
+-- FIRST ROWS
+SELECT /*+ FIRST_ROWS */
+	EMPNO, ENAME, SAL
+FROM SCOTT.EMP;
+
+-- CHOOSE
+SELECT /*+ CHOOSE */
+	EMPNO, ENAME, SAL
+FROM SCOTT.EMP;
+
+----------------- 액세스 패스 전택 --------------------
+
+-- HASH SCAN
+SELECT /*+ HASH(EMP) */
+	EMPNO, ENAME, SAL
+FROM SCOTT.EMP;
+
+-- ROW ID
+SELECT /*+ ROWID(SCOTT.EMP) */
+	EMPNO, ENAME, SAL
+FROM SCOTT.EMP;
+
+SELECT /*+ INDEX(EMP) */
+	EMPNO, ENAME, SAL
+FROM SCOTT.EMP;
+
+
+
+------------ JOIN ORDER ---------------------
+-- FROM 절에 적힌 순서대로 JOIN
+-- ANSI 표준 쿼리도 동일하게 적용
+SELECT /*+ ORDERED */ * 
+FROM SCOTT.EMP E , SCOTT.DEPT D
+WHERE E.DEPTNO = D.DEPTNO
+;
+
+SELECT /*+ ORDERED */ * 
+FROM SCOTT.DEPT D ,SCOTT.EMP E
+WHERE E.DEPTNO = D.DEPTNO
+;
+
+SELECT /*+ ORDERED */ *
+FROM SCOTT.DEPT D
+INNER JOIN SCOTT.EMP E ON D.DEPTNO = E.DEPTNO 
+;
+
+SELECT /*+ ORDERED */ *
+FROM SCOTT.EMP E
+INNER JOIN  SCOTT.DEPT D ON D.DEPTNO = E.DEPTNO 
+;
+
+------------ START JOIN -----------------------
+SELECT * 
+FROM SCOTT.EMP E
+INNER JOIN SCOTT.DEPT D ON D.DEPTNO = E.DEPTNO
+INNER JOIN SCOTT.BONUS B ON B.ENAME = E.ENAME 
+;
+
+
+SELECT /*+ ORDERED */ * 
+FROM SCOTT.EMP E
+INNER JOIN SCOTT.DEPT D ON D.DEPTNO = E.DEPTNO
+INNER JOIN SCOTT.BONUS B ON B.ENAME = E.ENAME 
+;
+
+
+SELECT /*+ STAR */ *
+FROM SCOTT.EMP E
+INNER JOIN SCOTT.DEPT D ON D.DEPTNO = E.DEPTNO
+INNER JOIN SCOTT.BONUS B ON B.ENAME = E.ENAME 
+;
+
+
+--------------- JOIN 방식 설정 ---------------------
+-- NL 조인
+SELECT /*+ USE_NL(E,D) */ *
+FROM SCOTT.EMP E
+INNER JOIN SCOTT.DEPT D ON D.DEPTNO = E.DEPTNO
+INNER JOIN SCOTT.BONUS B ON B.ENAME = E.ENAME 
+;
+
+-- HASH 조인
+SELECT /*+ USE_HASH (E,D) */ *
+FROM SCOTT.EMP E
+INNER JOIN SCOTT.DEPT D ON D.DEPTNO = E.DEPTNO
+INNER JOIN SCOTT.BONUS B ON B.ENAME = E.ENAME 
+;
+
+-- MERGE 조인
+SELECT /*+ USE_MERGE(E,D) */ *
+FROM SCOTT.EMP E
+INNER JOIN SCOTT.DEPT D ON D.DEPTNO = E.DEPTNO
+INNER JOIN SCOTT.BONUS B ON B.ENAME = E.ENAME 
+;
+
+
+------------- 버퍼 캐시 힌트 --------------------------
+/*+ CACHE() */
+
+/*+ NOCACHE() */
+
+
+
+-------------- 통계 힌트 ---------------------------
+
+-- DBMS_XPLAN.DISPLAY_CURSOR
+SELECT /*+ GATHER_PLAN_STATISTICS */
+	*
+FROM (SELECT e.*
+		FROM SCOTT.EMP e
+		WHERE e.DEPTNO = 10
+		ORDER BY e.EMPNO)	
+WHERE ROWNUM <= 100;
+
