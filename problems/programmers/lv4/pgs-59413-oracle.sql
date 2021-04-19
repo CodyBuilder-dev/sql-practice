@@ -1,0 +1,19 @@
+-- 제목 : 입양 시각 구하기(2)
+SELECT D.HOUR AS HOUR,
+    CASE
+        WHEN COUNT IS NULL THEN 0
+        ELSE COUNT
+    END AS COUNT
+FROM (
+    SELECT level -1 AS HOUR
+    FROM DUAL
+    CONNECT BY level <=24
+    ) D,
+    (
+    SELECT TO_CHAR(DATETIME,'HH24') AS HOUR,
+        COUNT(*) AS COUNT
+    FROM ANIMAL_OUTS
+    GROUP BY TO_CHAR(DATETIME,'HH24')
+    ) O
+WHERE  D.HOUR = O.HOUR (+)
+ORDER BY HOUR
