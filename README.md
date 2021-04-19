@@ -1,9 +1,8 @@
 # sql-practice
 <s>5월 SQLD 시험대비를 위한 SQL문 실습 repo</s> => 시험 합격  
-+ SQLP 대비 및 업무를 위한 SQL문 학습 repo  
-+ DAP 대비 및 업무를 위한 데이터 모델링 공부 추가
+DAP, SQLP 대비 및 업무를 위한 SQL문 학습 repo
 
-    Github에 정리하던 정보들을 Notion으로 옮겼습니다
+    Github에 정리하던 정보들을 Notion으로 옮겼습니다. 아래의 바로가기에서 확인할 수 있습니다.
 
 [Notion SQL 정리 바로가기](https://www.notion.so/codybuilder/SQL-ad70d46225914f0ca3794e65aa8bfc0a)
 
